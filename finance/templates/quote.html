@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    GET QUOTE
+{% endblock %}
+
+{% block main %}
+{% if tester["name"] is defined %}
+    <h1>{{tester["name"]}}</h1>
+    <h1>{{tester["price"]}}</h1>
+    <h1>{{tester["symbol"]}}</h1>
+    
+    <form action="/quote" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="TICKER" placeholder="TICKER" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Get it</button>
+    </form>
+    
+{% else %}
+    <form action="/quote" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="TICKER" placeholder="TICKER" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Get it</button>
+    </form>
+{% endif %}
+{% endblock %}

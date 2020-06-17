@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    HIST
+{% endblock %}
+
+{% block main %}
+{% if hist is defined %}
+    {% for act in hist%}
+    <h1>{{act["time"]}} {{act["ticker"]}} {{act["action"]}} {{act["qty"]}} {{act["value"]}}</h1>
+    {% endfor %}
+{% else %}
+    <h1>Nothing Here Yet</h1>
+{% endif %}
+{% endblock %}
