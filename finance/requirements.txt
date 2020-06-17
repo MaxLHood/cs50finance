@@ -2,3 +2,9 @@ cs50
 Flask
 Flask-Session
 requests
+os
+pandas
+tempfile
+werkzeug.exceptions
+werkzeug.security
+helpers
